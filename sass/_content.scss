@@ -1,0 +1,228 @@
+// CONTENT-1
+
+.content-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px;
+
+  background-color: $color-grey-light;
+  background:
+          linear-gradient(to bottom right,#FFFFFF 50%,#F0F0F0 50%) top   /100% 35%,
+          linear-gradient(to bottom left,#F0F0F0 50%,#F0F0F0 50%) bottom/100% 100%,
+          linear-gradient(#F0F0F0,#F0F0F0) center/100% 30%;
+  background-repeat:no-repeat;
+
+  &__fig {
+    display: grid;
+    justify-items: end;
+  }
+
+  &__text {
+    display: grid;
+    align-content: end;
+    padding-left: 100px;
+    padding-right: 320px;
+  }
+
+}
+
+@media  (max-width: 751px) {
+  .content-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0px;
+    justify-items: center;
+
+    &__fig-1 {
+      width: 347px;
+      height: 347px;
+      view-box: 0 0 347 347;
+    }
+    &__text {
+      padding: 30px;
+    }
+  }
+}
+
+
+
+// CONTENT-2
+
+.content-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "text-1 text-1"
+                       "text-2 square";
+  background-color: $color-grey-light;
+  padding-bottom: 100px;
+
+  &__text-1 {
+    grid-area: text-1;
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+
+  &__text-2 {
+    grid-area: text-2;
+    padding-left: 300px;
+    padding-right: 100px;
+
+    .list {
+      padding-left: 30px;
+    }
+  }
+}
+
+
+
+@media (max-width: 751px) {
+  .content-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "text-1"
+                          "square"
+                          "text-2";
+    justify-items: center;
+
+    &__text-1 {
+      padding: 30px;
+    }
+    &__text-2 {
+      padding: 30px;
+    }
+    &__fig-1 {
+      width: 347px;
+      height: 347px;
+      view-box: 0 0 347 347;
+    }
+  }
+ }
+
+// QUOTE
+
+.quote {
+  display: grid;
+  grid-template-areas: "border-1 border-1"
+                       "icon text"
+                       "border-2 border-2";
+  background-color: $color-grey-light;
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-bottom: 100px;
+
+  &__border-1 {
+    grid-area: border-1;
+  }
+  &__border-2 {
+    grid-area: border-2;
+  }
+  &__icon {
+    grid-area: icon;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
+
+.blockquote {
+  grid-area: text;
+  padding: 67px;
+  font-style: italic;
+
+  &__text {
+    font-size: 24px;
+    line-height: 40.5px;
+    font-weight: 200;
+    padding-bottom: 50px;
+  }
+  &__footer {
+    font-size: 24px;
+    line-height: 40.5px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 751px) {
+  .quote {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "border-1"
+                          "icon"
+                           "text"
+                          "border-2";
+    justify-items: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    &__border-1,
+    &__border-2 {
+      width: 356px;
+      height: 13px;
+    }
+    &__icon {
+      /* “ */
+      width: 107px;
+      height: 92px;
+      margin-left: 0px;
+    }
+  }
+}
+
+// CONTENT-3
+
+.content-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "text-3"
+                       "square-3";
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  background-color: $color-grey-light;
+  padding-bottom: 100px;
+  &__text {
+    grid-template-area: text-3;
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-bottom: 50px;
+  }
+  &__fig {
+    grid-template-area: square-3;
+  }
+}
+
+@media (max-width: 751px) {
+  .content-3 {
+    display: grid;
+    grid-template-areas: "text-3"
+                          "square-3";
+    padding-left: 0px;
+    padding-right: 0px;
+    &__text {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    &__fig {
+      width: 347px;
+      height: 347px;
+      view-box: 0 0 347 347;
+    }
+  }
+}
+
+
+// ABOUT
+
+.about {
+  display: grid;
+  justify-content: center;
+  padding-left: 300px;
+  padding-right: 300px;
+  background-color: $color-grey-light;
+  @media (max-width: 751px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
